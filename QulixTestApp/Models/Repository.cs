@@ -10,8 +10,7 @@ namespace QulixTestApp.Models
     public class Repository
     {
         private DbContext context = new DbContext();
-
-
+        
         /*
          methods for PersonModel
          */
@@ -51,6 +50,16 @@ namespace QulixTestApp.Models
         internal void DeletePerson(PersonModel _person)
         {
             string query = String.Format(@"EXEC DeletePerson {0}", _person.PersonId);
+            context.CallUpdateSP(query);
+        }
+
+        // call stored procedure for adding person
+        internal void AddPerson(PersonModel _person)
+        {
+            string query = String.Format(@"EXEC AddPerson '{0}','{1}','{2}'",
+                _person.FirstName, 
+                _person.SecondName, 
+                _person.LastName);
             context.CallUpdateSP(query);
         }
 
@@ -117,5 +126,19 @@ namespace QulixTestApp.Models
             string query = String.Format(@"EXEC DeleteTask {0}", _task.TaskId);
             context.CallUpdateSP(query);
         }
+
+        // call stored procedure for adding task
+        internal void AddTask(TaskModel _task)
+        {
+            string query = String.Format(@"EXEC AddTask '{0}',{1},'{2}','{3}',{4},{5}",
+                _task.Name,
+                _task.Amount,
+                _task.DateS,
+                _task.DateF,
+                _task.Status.StatusId,
+                _task.Person.PersonId);
+            context.CallUpdateSP(query);
+        }
+
     }
 }

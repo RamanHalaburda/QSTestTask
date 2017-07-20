@@ -22,5 +22,10 @@ namespace QulixTestApp.View.Task
         {
 
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddTask.aspx");
+        }
     }
 }

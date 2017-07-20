@@ -26,11 +26,19 @@ namespace QulixTestApp.View.Person
             try
             {
                 PersonModel person = new PersonModel(System.Convert.ToInt32(tbID.Text), tbF.Text, tbS.Text, tbL.Text);
-
                 Repository repository = new Repository();
                 repository.EditPerson(person);
             }
-            catch (Exception ex) { Response.Redirect("Error.aspx"); }
+            catch (Exception ex) 
+            {
+                Console.WriteLine("EditPerson: " + ex);
+                Response.Redirect("Error.aspx"); 
+            }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AllPersons.aspx");
         }
     }
 }

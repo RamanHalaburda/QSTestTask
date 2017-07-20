@@ -24,7 +24,8 @@
 
         <br>
 
-        <asp:Button ID="btnEdit" runat="server" Text="Применить изменения" OnClick="btnEdit_Click"/>
+        <asp:Button ID="btnEdit" runat="server" Text="Применить изменения" CssClass="btnEdit" OnClick="btnEdit_Click"/>
+        <asp:Button ID="btnCancel" runat="server" Text="Отмена" CssClass="btnEdit" OnClick="btnCancel_Click"/>
     </div>
     
 </asp:Content>

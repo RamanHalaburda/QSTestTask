@@ -20,12 +20,12 @@
         <br>
 
         <asp:Label  ID="Label4" runat="server" Text="Дата начала" CssClass="lbl"></asp:Label>
-        <asp:TextBox ID="tbDateS" runat="server" CssClass="tb"></asp:TextBox>
+        <asp:TextBox ID="tbDateS" runat="server" CssClass="tb" placeholder="YYYY-MM-DD"></asp:TextBox>
 
         <br>
 
         <asp:Label  ID="Label5" runat="server" Text="Дата завершения" CssClass="lbl"></asp:Label>
-        <asp:TextBox ID="tbDateF" runat="server" CssClass="tb"></asp:TextBox>
+        <asp:TextBox ID="tbDateF" runat="server" CssClass="tb" placeholder="YYYY-MM-DD"></asp:TextBox>
 
         <br>
 
@@ -39,7 +39,8 @@
 
         <br>
 
-        <asp:Button ID="btnEdit" runat="server" Text="Применить изменения" OnClick="btnEdit_Click"/>
+        <asp:Button ID="btnEdit" runat="server" Text="Применить изменения" CssClass="btnEdit" OnClick="btnEdit_Click1"/>
+        <asp:Button ID="btnCancel" runat="server" Text="Отмена" CssClass="btnEdit" OnClick="btnCancel_Click"/>
     </div>
 
 </asp:Content>

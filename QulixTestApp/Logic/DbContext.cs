@@ -13,6 +13,7 @@ namespace QulixTestApp.Logic
     {
         private static string conStr = "TestConnection";
 
+        // method for SELECT
         public DataTable CallSelectSP(string _query)
         {
             string constr = ConfigurationManager.ConnectionStrings[conStr].ConnectionString;
@@ -40,6 +41,7 @@ namespace QulixTestApp.Logic
             return null;
         }
 
+        // method for UPDATE, INSERT and DELETE
         public void CallUpdateSP(string _query)
         {
             string constr = ConfigurationManager.ConnectionStrings[conStr].ConnectionString;
@@ -47,8 +49,7 @@ namespace QulixTestApp.Logic
             try
             {
                 using (SqlConnection con = new SqlConnection(constr))
-                {
-                    
+                {                    
                     using (SqlCommand cmd = new SqlCommand(_query, con))
                     {
                         cmd.Connection.Open();

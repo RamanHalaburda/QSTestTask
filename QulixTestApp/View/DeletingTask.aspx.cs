@@ -20,7 +20,11 @@ namespace QulixTestApp.View
                     Repository repository = new Repository();
                     repository.DeleteTask(task);
                 }
-                catch (Exception ex) { Response.Redirect("Error.aspx"); }
+                catch (Exception ex) 
+                {
+                    Console.WriteLine("DeletingTask: " + ex);
+                    Response.Redirect("Error.aspx"); 
+                }
             }
         }
 

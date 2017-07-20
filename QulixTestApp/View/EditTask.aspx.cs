@@ -27,9 +27,9 @@ namespace QulixTestApp.View.Task
             }
         }
 
-        protected void btnEdit_Click(object sender, EventArgs e)
+        // save changes
+        protected void btnEdit_Click1(object sender, EventArgs e)
         {
-            int i;
             try
             {
                 PersonModel person = new PersonModel(ddlPerson.SelectedIndex, null, null, null);
@@ -39,8 +39,8 @@ namespace QulixTestApp.View.Task
                         Convert.ToInt32(tbID.Text),
                         tbName.Text,
                         Convert.ToInt32(tbAmount.Text),
-                        Convert.ToDateTime(tbDateS.Text),
-                        Convert.ToDateTime(tbDateF.Text),
+                        DateTime.Parse(tbDateS.Text),
+                        DateTime.Parse(tbDateF.Text),
                         status,
                         person
                     );
@@ -48,7 +48,17 @@ namespace QulixTestApp.View.Task
                 Repository repository = new Repository();
                 repository.EditTask(task);
             }
-            catch (Exception ex) {/* Response.Redirect("Error.aspx"); */}
+            catch (Exception ex)
+            {
+                Console.WriteLine("EditTask: " + ex);
+                Response.Redirect("Error.aspx");
+            }  
+        }
+
+        // cancel and return to AllTasks.aspx
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AllTasks.aspx");
         }
     }
 }

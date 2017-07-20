@@ -20,7 +20,11 @@ namespace QulixTestApp.View
                     Repository repository = new Repository();
                     repository.DeletePerson(person);
                 }
-                catch (Exception ex) { Response.Redirect("Error.aspx"); }
+                catch (Exception ex) 
+                {
+                    Console.WriteLine("DeletingPerson: " + ex);
+                    Response.Redirect("Error.aspx"); 
+                }
             }
         }
 
