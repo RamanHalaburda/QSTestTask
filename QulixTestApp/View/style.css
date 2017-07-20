@@ -1,4 +1,6 @@
-﻿table {
+﻿/* === styles for tables === */
+
+table {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     border-collapse: collapse;
@@ -40,4 +42,35 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
   background: #D8E6F3;
+}
+
+/* === styles for edit and add forms === */
+
+#filters {
+    border: 2px solid white;
+    border-color: #b58900;
+    border-radius: 3px;
+    padding: 10px;
+    height: initial;
+    margin-top: 10px;
+}
+
+
+.lbl {
+    display:block;
+	float:left;
+	width:150px;
+}
+
+.tb {
+    width: 200px;
+    margin-bottom: 2px;
+}
+.lbl .tb {
+
+}
+
+.btnEdit {
+    margin-left: 5px;
+    margin-top: 5px;
 }

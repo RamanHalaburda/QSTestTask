@@ -163,7 +163,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\TableStyle.css" />
+    <Content Include="View\DeletingPerson.aspx" />
+    <Content Include="View\DeletingTask.aspx" />
+    <Content Include="View\Error.aspx" />
+    <Content Include="View\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -205,12 +208,12 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="View\Person\AddPerson.aspx" />
-    <Content Include="View\Person\AllPersons.aspx" />
-    <Content Include="View\Person\EditPerson.aspx" />
-    <Content Include="View\Task\AddTask.aspx" />
-    <Content Include="View\Task\AllTasks.aspx" />
-    <Content Include="View\Task\EditTask.aspx" />
+    <Content Include="View\AddPerson.aspx" />
+    <Content Include="View\AllPersons.aspx" />
+    <Content Include="View\EditPerson.aspx" />
+    <Content Include="View\AddTask.aspx" />
+    <Content Include="View\AllTasks.aspx" />
+    <Content Include="View\EditTask.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -343,8 +346,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\DbContext.cs" />
+    <Compile Include="Logic\FillFields.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\Repository.cs" />
     <Compile Include="Models\StatusModel.cs" />
     <Compile Include="Models\TaskModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -370,47 +376,68 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="View\Person\AddPerson.aspx.cs">
+    <Compile Include="View\AddPerson.aspx.cs">
       <DependentUpon>AddPerson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Person\AddPerson.aspx.designer.cs">
+    <Compile Include="View\AddPerson.aspx.designer.cs">
       <DependentUpon>AddPerson.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Person\AllPersons.aspx.cs">
+    <Compile Include="View\AllPersons.aspx.cs">
       <DependentUpon>AllPersons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Person\AllPersons.aspx.designer.cs">
+    <Compile Include="View\AllPersons.aspx.designer.cs">
       <DependentUpon>AllPersons.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Person\EditPerson.aspx.cs">
+    <Compile Include="View\DeletingPerson.aspx.cs">
+      <DependentUpon>DeletingPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\DeletingPerson.aspx.designer.cs">
+      <DependentUpon>DeletingPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\DeletingTask.aspx.cs">
+      <DependentUpon>DeletingTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\DeletingTask.aspx.designer.cs">
+      <DependentUpon>DeletingTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditPerson.aspx.cs">
       <DependentUpon>EditPerson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Person\EditPerson.aspx.designer.cs">
+    <Compile Include="View\EditPerson.aspx.designer.cs">
       <DependentUpon>EditPerson.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Task\AddTask.aspx.cs">
+    <Compile Include="View\AddTask.aspx.cs">
       <DependentUpon>AddTask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Task\AddTask.aspx.designer.cs">
+    <Compile Include="View\AddTask.aspx.designer.cs">
       <DependentUpon>AddTask.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Task\AllTasks.aspx.cs">
+    <Compile Include="View\AllTasks.aspx.cs">
       <DependentUpon>AllTasks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Task\AllTasks.aspx.designer.cs">
+    <Compile Include="View\AllTasks.aspx.designer.cs">
       <DependentUpon>AllTasks.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Task\EditTask.aspx.cs">
+    <Compile Include="View\EditTask.aspx.cs">
       <DependentUpon>EditTask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Task\EditTask.aspx.designer.cs">
+    <Compile Include="View\EditTask.aspx.designer.cs">
       <DependentUpon>EditTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

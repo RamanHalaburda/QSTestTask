@@ -8,10 +8,18 @@ namespace QulixTestApp.Models
 {
     public class StatusModel
     {
-        public int StatusId { get; set; }
+        // fields
+        public short StatusId { get; set; }
 
         [Required]
         [Display(Name = "Name")]
         public string Name { get; set; }
+
+        // constructor
+        public StatusModel(short _id, string _name)
+        {
+            this.StatusId = _id;
+            this.Name = _name;
+        }
     }
 }

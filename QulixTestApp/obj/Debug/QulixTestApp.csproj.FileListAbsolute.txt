@@ -47,6 +47,6 @@ E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\bin\Microsoft.Owin.Secu
 E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\bin\Microsoft.Owin.Security.Twitter.xml
 E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\bin\Microsoft.Owin.Security.OAuth.xml
-E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\obj\Debug\QulixTestApp.csprojResolveAssemblyReference.cache
 E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\obj\Debug\QulixTestApp.dll
 E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\obj\Debug\QulixTestApp.pdb
+E:\study\PREPARE_TO_QULIX\proj\QulixTestApp\QulixTestApp\obj\Debug\QulixTestApp.csprojResolveAssemblyReference.cache
